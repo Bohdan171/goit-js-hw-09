@@ -16,3 +16,20 @@ img {
   display: block;
   max-width: 100%;
 }
+button {
+  border: none;
+  border-radius: 20px;
+  width: 100px;
+  height: 70px;
+  font-size: 20px;
+
+}
+.buttons_colors {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+button:focus {
+  box-shadow: 2px 2px 2px 1px rgba(106, 106, 109, 0.2);
+}
