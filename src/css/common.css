@@ -16,15 +16,15 @@ img {
   display: block;
   max-width: 100%;
 }
-button {
+/* button {
   border: none;
   border-radius: 20px;
   width: 100px;
   height: 70px;
   font-size: 20px;
-
+  font-weight: 500px;
 }
-.buttons_colors {
+.buttons_color {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -32,4 +32,56 @@ button {
 }
 button:focus {
   box-shadow: 2px 2px 2px 1px rgba(106, 106, 109, 0.2);
+}
+.timer{
+  display: flex;
+}
+
+.field{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+.value{
+  font-size: 30px;
+  font-weight: bold;
+} */
+.buttons_color {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+  
+}
+
+.buttons_color button{
+  width: 100px;
+  height: 70px;
+  font-size: 20px;
+  font-weight: 500px;
+  border: none;
+  border-radius: 20px;
+}
+button:focus {
+  box-shadow: 2px 2px 2px 1px rgba(106, 106, 109, 0.2);
+}
+.timer{
+  display: flex;
+}
+
+.field{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.value{
+  font-size: 30px;
+  font-weight: bold;
 }
