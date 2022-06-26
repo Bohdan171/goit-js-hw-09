@@ -1,4 +1,3 @@
-
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -51,13 +50,13 @@ const options = {
 
       const diff = selectData - now;
       const { days, hours, minutes, seconds } = convertMs(diff);
-      daysRef.textContent = days;
+      daysRef.textContent = addLeadingZero(days);
       hoursRef.textContent = addLeadingZero(hours);
       minutesRef.textContent = addLeadingZero(minutes);
       secondsRef.textContent = addLeadingZero(seconds);
 
       if (
-        daysRef.textContent === '0' &&
+        daysRef.textContent === '00' &&
         hoursRef.textContent === '00' &&
         minutesRef.textContent === '00' &&
         secondsRef.textContent === '00'
@@ -67,11 +66,11 @@ const options = {
     };
 
     const onClick = () => {
-        showTimer();
-        timerId = setInterval(showTimer, 1000);
-        startBtn.setAttribute('disabled', true);
-        dateInputRef.setAttribute('disabled', true);
-        startBtn.removeEventListener('click', onClick);
+      showTimer();
+      timerId = setInterval(showTimer, 1000);
+      startBtn.setAttribute('disabled', true);
+      dateInputRef.setAttribute('disabled', true);
+      startBtn.removeEventListener('click', onClick);
     };
 
     startBtn.addEventListener('click', onClick);
